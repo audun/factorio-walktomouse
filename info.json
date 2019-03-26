@@ -1,0 +1,11 @@
+{
+    "name": "WalkToMouse",
+    "version": "0.17.0",
+    "title": "Walk To Mouse",
+    "author": "_italics_",
+    "contact": "",
+    "homepage": "https://mods.factorio.com/mod/walktomouse",
+    "factorio_version": "0.17",
+    "dependencies": ["base >= 0.16" ],
+    "description": "Walk to the mouse position"
+}
