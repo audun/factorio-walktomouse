@@ -1,4 +1,5 @@
 local d = require("defines")
+local NEUTRAL = {direction = defines.riding.direction.straight, acceleration = defines.riding.acceleration.nothing}
 
 local function get_direction(from, to)
    local dir = nil
@@ -25,8 +26,6 @@ local function get_direction(from, to)
    end
    return dir
 end
-
-local NEUTRAL = {direction = defines.riding.direction.straight, acceleration = defines.riding.acceleration.nothing}
 
 local function get_riding_state(player, v, o, t)
    local radians = o * 2*math.pi
@@ -106,7 +105,7 @@ local function on_tick(tick_event)
             end
          else
             local dir = get_direction(player.position, e.position)
-            if dir then
+            if dir and tick_event.tick == e.tick then
                player.walking_state = { walking = true, direction = dir }
             else
                table.remove(global.targets, idx)
