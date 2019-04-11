@@ -7,6 +7,7 @@ player_remote_capsule.order = '__a'
 player_remote_capsule.icon = "__core__/graphics/empty.png"
 player_remote_capsule.icon_size = 1
 player_remote_capsule['capsule_action']['attack_parameters']['cooldown'] = 1
+player_remote_capsule['capsule_action']['attack_parameters']['range'] = 125
 player_remote_capsule['capsule_action']['attack_parameters']['ammo_type']['action'] = nil
 player_remote_capsule.stack_size = 1
 -- print(serpent.block(data.raw["capsule"]['poison-capsule']))
